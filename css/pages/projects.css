@@ -1,0 +1,1902 @@
+/* =========================================
+   PROJECTS PAGE
+========================================= */
+
+
+/* =========================================
+   PROJECTS HERO
+========================================= */
+
+.projects-page-hero {
+
+    position:
+        relative;
+
+    height:
+        calc(100vh - 72px);
+
+    min-height:
+        0;
+
+    margin:
+        0;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(103,232,249,0.18),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 15% 75%,
+            rgba(59,130,246,0.18),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a 0%,
+            #172554 45%,
+            #1e3a8a 72%,
+            #0e7490 100%
+        );
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================
+   HERO BACKGROUND
+========================================= */
+
+.projects-hero-background {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+}
+
+
+.projects-hero-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        72px 72px;
+
+    opacity:
+        0.7;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent
+        );
+
+}
+
+
+.projects-hero-glow {
+
+    position:
+        absolute;
+
+    width:
+        650px;
+
+    height:
+        650px;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(103,232,249,0.14),
+            rgba(59,130,246,0.08) 35%,
+            transparent 70%
+        );
+
+    filter:
+        blur(25px);
+
+    opacity:
+        0.85;
+
+    animation:
+        projectsGlow
+        9s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================
+   HERO ORBIT
+========================================= */
+
+.projects-hero-orbit {
+
+    position:
+        absolute;
+
+    width:
+        760px;
+
+    height:
+        760px;
+
+    right:
+        -250px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    opacity:
+        0.65;
+
+    pointer-events:
+        none;
+
+}
+
+
+.projects-orbit-ring {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    border-radius:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+.projects-orbit-ring-one {
+
+    animation:
+        projectsOrbitRotate
+        24s
+        linear
+        infinite;
+
+}
+
+
+.projects-orbit-ring-two {
+
+    width:
+        72%;
+
+    height:
+        72%;
+
+    border-color:
+        rgba(103,232,249,0.18);
+
+    animation:
+        projectsOrbitRotateReverse
+        17s
+        linear
+        infinite;
+
+}
+
+
+.projects-orbit-ring-three {
+
+    width:
+        44%;
+
+    height:
+        44%;
+
+    border-color:
+        rgba(255,255,255,0.07);
+
+    animation:
+        projectsOrbitRotate
+        13s
+        linear
+        infinite;
+
+}
+
+
+/* =========================================
+   ORBIT DOTS
+========================================= */
+
+.projects-orbit-dot {
+
+    position:
+        absolute;
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    background:
+        #67e8f9;
+
+    box-shadow:
+        0 0 22px
+        rgba(103,232,249,0.8);
+
+}
+
+
+.projects-orbit-dot-one {
+
+    top:
+        9%;
+
+    left:
+        48%;
+
+}
+
+
+.projects-orbit-dot-two {
+
+    right:
+        10%;
+
+    bottom:
+        17%;
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    opacity:
+        0.7;
+
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.projects-page-hero
+.section-container {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    min-height:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        90px 0 110px;
+
+}
+
+
+.projects-hero-content {
+
+    width:
+        100%;
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.projects-page-number {
+
+    margin-bottom:
+        14px;
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3px;
+
+    color:
+        #67e8f9;
+
+    opacity:
+        0.8;
+
+}
+
+
+.projects-page-label {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        25px;
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3px;
+
+    color:
+        #bfdbfe;
+
+}
+
+
+.projects-page-icon {
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    margin:
+        0 auto 28px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.16);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    box-shadow:
+        0 10px 40px
+        rgba(0,0,0,0.12);
+
+    backdrop-filter:
+        blur(12px);
+
+    font-size:
+        1.3rem;
+
+}
+
+
+.projects-hero-content h1 {
+
+    margin:
+        0 0 30px;
+
+    font-size:
+        clamp(
+            4.5rem,
+            10vw,
+            8.5rem
+        );
+
+    line-height:
+        0.88;
+
+    letter-spacing:
+        -6px;
+
+    font-weight:
+        800;
+
+    color:
+        #ffffff;
+
+}
+
+
+.projects-hero-content h1 span {
+
+    color:
+        #67e8f9;
+
+}
+
+
+.projects-hero-description {
+
+    max-width:
+        680px;
+
+    margin:
+        0 auto 30px;
+
+    font-size:
+        clamp(
+            1rem,
+            1.8vw,
+            1.2rem
+        );
+
+    line-height:
+        1.8;
+
+    color:
+        #dbeafe;
+
+}
+
+
+.projects-hero-meta {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+}
+
+
+.projects-hero-meta span {
+
+    padding:
+        7px 13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.16);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    backdrop-filter:
+        blur(10px);
+
+    color:
+        #bfdbfe;
+
+    font-size:
+        0.65rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.2px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.projects-hero-meta span:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(103,232,249,0.35);
+
+    background:
+        rgba(103,232,249,0.08);
+
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.projects-scroll-indicator {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        28px;
+
+    z-index:
+        3;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        rgba(255,255,255,0.5);
+
+    font-size:
+        0.58rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2.5px;
+
+}
+
+
+.projects-scroll-line {
+
+    position:
+        relative;
+
+    width:
+        1px;
+
+    height:
+        42px;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(255,255,255,0.14);
+
+}
+
+
+.projects-scroll-line span {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        -100%;
+
+    width:
+        100%;
+
+    height:
+        50%;
+
+    background:
+        #67e8f9;
+
+    animation:
+        projectsScrollLine
+        1.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================
+   COMING SOON
+========================================= */
+
+.projects-coming-soon {
+
+    position:
+        relative;
+
+    margin:
+        0;
+
+    padding:
+        150px 0;
+
+    overflow:
+        hidden;
+
+    background:
+        #f8fafc;
+
+    color:
+        var(--text-primary);
+
+}
+
+
+.projects-coming-soon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        520px;
+
+    height:
+        520px;
+
+    left:
+        -260px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,99,235,0.07),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+.projects-coming-soon
+.section-container {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+}
+
+
+.projects-coming-soon-content {
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+.projects-section-label {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        24px;
+
+    color:
+        var(--primary);
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2.5px;
+
+}
+
+
+.projects-coming-soon h2 {
+
+    margin:
+        0 0 28px;
+
+    font-size:
+        clamp(
+            3.2rem,
+            6vw,
+            5.8rem
+        );
+
+    line-height:
+        0.95;
+
+    letter-spacing:
+        -4px;
+
+    font-weight:
+        800;
+
+    color:
+        var(--navy);
+
+}
+
+
+.projects-coming-soon h2 span {
+
+    color:
+        var(--primary);
+
+}
+
+
+.projects-coming-soon-content > p {
+
+    max-width:
+        680px;
+
+    margin:
+        0 auto;
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.85;
+
+    color:
+        var(--text-secondary);
+
+}
+
+
+.projects-coming-soon-line {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-top:
+        55px;
+
+}
+
+
+.projects-coming-soon-line span {
+
+    flex:
+        1;
+
+    height:
+        1px;
+
+    background:
+        var(--border);
+
+}
+
+
+.projects-coming-soon-line strong {
+
+    white-space:
+        nowrap;
+
+    font-size:
+        0.58rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    color:
+        var(--text-muted);
+
+}
+
+
+/* =========================================
+   PROJECT PREVIEW
+========================================= */
+
+.projects-preview {
+
+    position:
+        relative;
+
+    margin:
+        0;
+
+    padding:
+        150px 0;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a 0%,
+            #172554 50%,
+            #1e3a8a 100%
+        );
+
+    color:
+        #ffffff;
+
+}
+
+
+.projects-preview::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        650px;
+
+    height:
+        650px;
+
+    right:
+        -325px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(103,232,249,0.08),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+.projects-preview-grid {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0,1fr)
+        );
+
+    gap:
+        20px;
+
+    max-width:
+        1150px;
+
+    margin:
+        0 auto;
+
+}
+
+
+.projects-preview-card {
+
+    position:
+        relative;
+
+    min-height:
+        300px;
+
+    padding:
+        34px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    backdrop-filter:
+        blur(12px);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.projects-preview-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        2px;
+
+    background:
+        #67e8f9;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.projects-preview-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        -100px;
+
+    bottom:
+        -100px;
+
+    width:
+        220px;
+
+    height:
+        220px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(103,232,249,0.06);
+
+    filter:
+        blur(25px);
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.projects-preview-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(103,232,249,0.25);
+
+    background:
+        rgba(255,255,255,0.065);
+
+    box-shadow:
+        0 24px 60px
+        rgba(0,0,0,0.2);
+
+}
+
+
+.projects-preview-card:hover::before {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.projects-preview-card:hover::after {
+
+    transform:
+        scale(1.45);
+
+}
+
+
+.projects-preview-card > span {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    font-size:
+        0.65rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #67e8f9;
+
+}
+
+
+.projects-preview-card strong {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        block;
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        1.6rem;
+
+    font-weight:
+        800;
+
+    color:
+        #ffffff;
+
+}
+
+
+.projects-preview-card p {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    max-width:
+        500px;
+
+    margin:
+        0;
+
+    font-size:
+        0.9rem;
+
+    line-height:
+        1.8;
+
+    color:
+        #bfdbfe;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.projects-footer {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    margin:
+        0 !important;
+
+    padding:
+        30px 0;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    background:
+        #0f172a;
+
+}
+
+
+.projects-footer .section-container {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+}
+
+
+.projects-footer p {
+
+    margin:
+        0;
+
+    font-size:
+        0.75rem;
+
+    color:
+        rgba(255,255,255,0.35);
+
+}
+
+
+.projects-footer a {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    margin:
+        0;
+
+    font-size:
+        0.75rem;
+
+    font-weight:
+        700;
+
+    color:
+        rgba(255,255,255,0.6);
+
+    text-decoration:
+        none;
+
+    transition:
+        color 0.2s ease;
+
+}
+
+
+.projects-footer a:hover {
+
+    color:
+        #67e8f9;
+
+}
+
+
+/* =========================================
+   PAGE SPACING PROTECTION
+========================================= */
+
+main {
+
+    display:
+        block;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+}
+
+
+.projects-preview {
+
+    margin-bottom:
+        0 !important;
+
+}
+
+
+.projects-footer {
+
+    margin-top:
+        0 !important;
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes projectsGlow {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity:
+            0.65;
+
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.08);
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+@keyframes projectsOrbitRotate {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes projectsOrbitRotateReverse {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+
+    }
+
+}
+
+
+@keyframes projectsScrollLine {
+
+    0% {
+
+        top:
+            -100%;
+
+    }
+
+    50% {
+
+        top:
+            100%;
+
+    }
+
+    100% {
+
+        top:
+            100%;
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .projects-preview-grid {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            600px;
+
+    }
+
+
+    .projects-preview-card {
+
+        min-height:
+            260px;
+
+    }
+
+
+    .projects-hero-orbit {
+
+        width:
+            560px;
+
+        height:
+            560px;
+
+        right:
+            -220px;
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .projects-page-hero {
+
+        height:
+            calc(100vh - 65px);
+
+    }
+
+
+    .projects-page-hero
+    .section-container {
+
+        height:
+            100%;
+
+        padding:
+            80px 0 100px;
+
+    }
+
+
+    .projects-coming-soon {
+
+        padding:
+            110px 0;
+
+    }
+
+
+    .projects-preview {
+
+        padding:
+            110px 0;
+
+    }
+
+
+    .projects-footer {
+
+        padding:
+            30px 0;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .projects-hero-glow {
+
+        width:
+            320px;
+
+        height:
+            320px;
+
+        opacity:
+            0.55;
+
+    }
+
+
+    .projects-hero-orbit {
+
+        width:
+            360px;
+
+        height:
+            360px;
+
+        right:
+            -210px;
+
+        top:
+            28%;
+
+        opacity:
+            0.25;
+
+    }
+
+
+    .projects-page-number {
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .projects-page-label {
+
+        margin-bottom:
+            20px;
+
+        font-size:
+            0.62rem;
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    .projects-page-icon {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        margin-bottom:
+            24px;
+
+    }
+
+
+    .projects-hero-content h1 {
+
+        margin-bottom:
+            25px;
+
+        font-size:
+            clamp(
+                3.8rem,
+                18vw,
+                6rem
+            );
+
+        letter-spacing:
+            -4px;
+
+    }
+
+
+    .projects-hero-description {
+
+        max-width:
+            500px;
+
+        font-size:
+            0.95rem;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    .projects-hero-meta {
+
+        gap:
+            6px;
+
+    }
+
+
+    .projects-hero-meta span {
+
+        padding:
+            6px 10px;
+
+        font-size:
+            0.6rem;
+
+    }
+
+
+    .projects-scroll-indicator {
+
+        bottom:
+            18px;
+
+    }
+
+
+    .projects-coming-soon {
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .projects-coming-soon h2 {
+
+        font-size:
+            clamp(
+                2.8rem,
+                13vw,
+                4.5rem
+            );
+
+        letter-spacing:
+            -2.5px;
+
+    }
+
+
+    .projects-coming-soon-content > p {
+
+        font-size:
+            0.95rem;
+
+    }
+
+
+    .projects-coming-soon-line {
+
+        gap:
+            12px;
+
+        margin-top:
+            40px;
+
+    }
+
+
+    .projects-preview {
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .projects-preview-card {
+
+        min-height:
+            250px;
+
+        padding:
+            28px;
+
+    }
+
+
+    .projects-preview-card strong {
+
+        font-size:
+            1.45rem;
+
+    }
+
+
+    .projects-preview-card p {
+
+        font-size:
+            0.88rem;
+
+    }
+
+
+    /* =========================================
+       MOBILE FOOTER
+    ========================================== */
+
+    .projects-footer {
+
+        padding:
+            30px 0;
+
+    }
+
+
+    .projects-footer
+    .section-container {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        text-align:
+            center;
+
+    }
+
+}
+
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media (hover: none) {
+
+    .projects-preview-card:hover {
+
+        transform:
+            none;
+
+        border-color:
+            rgba(255,255,255,0.1);
+
+        background:
+            rgba(255,255,255,0.045);
+
+        box-shadow:
+            none;
+
+    }
+
+
+    .projects-preview-card:hover::before {
+
+        transform:
+            scaleX(0);
+
+    }
+
+
+    .projects-preview-card:hover::after {
+
+        transform:
+            none;
+
+    }
+
+
+    .projects-hero-meta span:hover {
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+
+    *::before,
+
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            0.01ms !important;
+
+    }
+
+}

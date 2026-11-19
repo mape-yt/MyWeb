@@ -44,6 +44,7 @@
         href="css/pages/about.css"
     >
 
+<link rel="stylesheet" href="css/theme.css?v=20261118">
 </head>
 
 
@@ -54,32 +55,16 @@
          NAVIGATION
     ========================================== -->
 
-    <header class="navbar project-navbar">
-
-        <div class="nav-container">
-
-            <a
-                href="index.html"
-                class="logo"
-            >
-                Seungyun Lim
-            </a>
-
-
-            <a
-                href="index.html"
-                class="project-nav-back"
-            >
-                ← Back to Home
-            </a>
-
-        </div>
-
-    </header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header"><div class="wrap site-nav">
+<a class="site-brand" href="index.html" aria-label="Seungyun Lim, home"><span class="brand-mark" aria-hidden="true">SL.</span>Seungyun Lim</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+<nav class="site-links" id="site-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="projects.html">Projects</a><a href="index.html#interests">Interests</a><a class="nav-contact" href="index.html#contact">Let's connect</a></nav>
+</div></header>
 
 
 
-    <main>
+    <main id="main-content">
 
 
         <!-- =========================================
@@ -266,7 +251,7 @@
              02 — MY JOURNEY
         ========================================== -->
 
-        <section class="about-journey-section">
+        <section class="about-journey-section" id="my-journey">
 
             <div class="section-container">
 
@@ -1197,21 +1182,7 @@
          FOOTER
     ========================================== -->
 
-    <footer class="about-footer">
-
-        <div class="section-container">
-
-            <p>
-                © 2026 Seungyun Lim
-            </p>
-
-            <a href="index.html">
-                Back to Home ↑
-            </a>
-
-        </div>
-
-    </footer>
+    <footer class="site-footer"><div class="wrap"><p>© 2026 Seungyun Lim · Built with curiosity.</p><nav aria-label="Footer navigation"><a href="about.html">About</a><a href="https://github.com/mape-yt" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#main-content">Back to top</a></nav></div></footer>
 
 
 
@@ -1219,9 +1190,10 @@
          JAVASCRIPT
     ========================================== -->
 
-    <script src="js/about.js"></script>
+    <script src="js/about.js?v=20261118"></script>
 
 
+<script src="js/site.js?v=20261118" defer></script>
 </body>
 
 </html>

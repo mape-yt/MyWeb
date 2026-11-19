@@ -1,28 +1,9 @@
-/* =========================================
-   MAPLEPATH LIVE PRODUCT DEMO
-========================================= */
-
-
-const demoSteps =
-    document.querySelectorAll(".demo-step");
-
-const demoContent =
-    document.getElementById("demo-content");
-
-const demoTitle =
-    document.getElementById("demo-title");
-
-const demoProgress =
-    document.querySelector(".demo-progress span");
-
-const demoProgressFill =
-    document.querySelector(".demo-progress-fill");
-
-
-/* =========================================
-   DEMO DATA
-========================================= */
-
+/* Interactive concept preview; all values are illustrative. */
+const demoSteps = document.querySelectorAll('.demo-step');
+const demoContent = document.getElementById('demo-content');
+const demoTitle = document.getElementById('demo-title');
+const demoProgress = document.querySelector('.demo-progress span');
+const demoProgressFill = document.querySelector('.demo-progress-fill');
 const demoData = {
 
     profile: {
@@ -107,149 +88,23 @@ const demoData = {
 };
 
 
-/* =========================================
-   CHANGE DEMO
-========================================= */
 
 function changeDemoStep(step) {
-
-    const data =
-        demoData[step];
-
-    if (!data) {
-        return;
-    }
-
-
-    /*
-        Start exit animation
-    */
-
-    demoContent.classList.add(
-        "switching"
-    );
-
-
-    /*
-        Animate progress bar
-    */
-
-    demoProgressFill.style.width =
-        `${data.progress}%`;
-
-
-    /*
-        Update percentage
-    */
-
-    demoProgress.textContent =
-        `${data.progress}%`;
-
-
-    /*
-        Wait for content transition
-    */
-
-    setTimeout(() => {
-
-        demoTitle.textContent =
-            data.title;
-
-
-        demoContent.innerHTML = `
-
-            <div
-                class="demo-content-icon ${data.iconClass}"
-            >
-                ${data.icon}
-            </div>
-
-            <span class="demo-content-label">
-                ${data.label}
-            </span>
-
-            <h4>
-                ${data.heading}
-            </h4>
-
-            <p>
-                ${data.description}
-            </p>
-
-        `;
-
-
-        demoContent.classList.remove(
-            "switching"
-        );
-
-    }, 250);
-
+  const data = demoData[step];
+  if (!data || !demoContent || !demoTitle || !demoProgress || !demoProgressFill) return;
+  demoSteps.forEach(button => {
+    const active = button.dataset.step === step;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
+  demoTitle.textContent = data.title;
+  demoProgress.textContent = `${data.progress}%`;
+  demoProgressFill.style.width = `${data.progress}%`;
+  demoContent.innerHTML = `<div class="demo-content-icon ${data.iconClass}" aria-hidden="true">${data.icon}</div>
+    <span class="demo-content-label">${data.label}</span><h4>${data.heading}</h4><p>${data.description}</p>`;
 }
-
-
-/* =========================================
-   STEP BUTTONS
-========================================= */
-
-demoSteps.forEach(step => {
-
-    step.addEventListener(
-        "click",
-        () => {
-
-            /*
-                Remove active state
-                from every button
-            */
-
-            demoSteps.forEach(item => {
-
-                item.classList.remove(
-                    "active"
-                );
-
-            });
-
-
-            /*
-                Activate selected step
-            */
-
-            step.classList.add(
-                "active"
-            );
-
-
-            /*
-                Get selected step
-            */
-
-            const selectedStep =
-                step.dataset.step;
-
-
-            /*
-                Update demo
-            */
-
-            changeDemoStep(
-                selectedStep
-            );
-
-        }
-    );
-
-});
-
-
-/* =========================================
-   INITIAL STATE
-========================================= */
-
-if (demoData.profile) {
-
-    demoProgressFill.style.width =
-        `${demoData.profile.progress}%`;
-
+if (demoContent) {
+  demoContent.setAttribute('aria-live', 'polite');
+  demoSteps.forEach(button => button.addEventListener('click', () => changeDemoStep(button.dataset.step)));
+  changeDemoStep('profile');
 }

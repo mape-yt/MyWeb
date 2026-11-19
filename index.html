@@ -1,2097 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Seungyun Lim | Student, Developer & Builder
-    </title>
-
-    <meta
-        name="description"
-        content="The personal website and portfolio of Seungyun Lim — student, developer, STEM enthusiast, and builder."
-    >
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
-</head>
-
-
-<body>
-
-
-    <!-- =========================================
-         NAVIGATION
-    ========================================== -->
-
-    <header class="navbar">
-
-        <div class="nav-container">
-
-
-            <!-- Logo -->
-
-            <a
-                href="index.html"
-                class="logo"
-            >
-                Seungyun Lim
-            </a>
-
-
-            <!-- Desktop Navigation -->
-
-            <nav
-                class="nav-links desktop-nav"
-                aria-label="Main navigation"
-            >
-
-                <a href="#home">
-                    Home
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Seungyun Lim | Student, Developer &amp; Builder
+        </title>
+        <meta name="description" content="Seungyun Lim — a student and developer in Calgary exploring computer science, machine learning, and useful software. Explore my projects, interests, and story.">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/theme.css?v=20261118">
+    </head>
+    <body class="home-page">
+        <a class="skip-link" href="#main-content">
+            Skip to content
+        </a>
+        <header class="site-header">
+            <div class="wrap site-nav">
+                <a class="site-brand" href="index.html" aria-label="Seungyun Lim, home">
+                    <span class="brand-mark" aria-hidden="true">
+                        SL.
+                    </span>
+                    Seungyun Lim
                 </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#projects">
-                    Projects
-                </a>
-
-                <a href="#journey">
-                    Journey
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </nav>
-
-
-            <!-- Mobile Menu Button -->
-
-            <button
-                class="mobile-menu-button"
-                id="mobile-menu-button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                type="button"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-
-            <!-- Mobile Navigation -->
-
-            <nav
-                class="mobile-nav"
-                id="mobile-nav"
-                aria-label="Mobile navigation"
-            >
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#projects">
-                    Projects
-                </a>
-
-                <a href="#journey">
-                    Journey
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <main>
-
-
-        <!-- =========================================
-             HERO
-        ========================================== -->
-
-        <section
-            id="home"
-            class="hero"
-        >
-
-
-            <!-- Hero Background -->
-
-            <div class="hero-background">
-
-                <div
-                    class="hero-glow hero-glow-one"
-                ></div>
-
-                <div
-                    class="hero-glow hero-glow-two"
-                ></div>
-
-                <div class="hero-grid"></div>
-
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
+                    Menu
+                </button>
+                <nav class="site-links" id="site-links" aria-label="Main navigation">
+                    <a href="index.html" aria-current="page">
+                        Home
+                    </a>
+                    <a href="about.html">
+                        About
+                    </a>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                    <a href="index.html#interests">
+                        Interests
+                    </a>
+                    <a class="nav-contact" href="index.html#contact">
+                        Let's connect
+                    </a>
+                </nav>
             </div>
-
-
-            <!-- Hero Content -->
-
-            <div class="hero-content">
-
-
-                <!-- Hero Intro -->
-
-                <div class="hero-intro">
-
-                    <span class="hero-status">
-
-                        <span
-                            class="hero-status-dot"
-                        ></span>
-
-                        BUILDING THE FUTURE
-
-                    </span>
-
-
-                    <p class="hero-greeting">
-                        Hi, I'm
-                    </p>
-
-                </div>
-
-
-                <!-- Hero Name -->
-
-                <h1 class="hero-name">
-
-                    Seungyun
-
-                    <span>
-                        Lim.
-                    </span>
-
-                </h1>
-
-
-                <!-- Hero Role -->
-
-                <div class="hero-role">
-
-                    <span>
-                        Student
-                    </span>
-
-                    <span class="hero-role-dot">
-                        •
-                    </span>
-
-                    <span>
-                        Developer
-                    </span>
-
-                    <span class="hero-role-dot">
-                        •
-                    </span>
-
-                    <span>
-                        Builder
-                    </span>
-
-                </div>
-
-
-                <!-- Hero Description -->
-
-                <p class="hero-description">
-
-                    I'm a high school student fascinated by
-                    <strong>Computer Science</strong>,
-                    <strong>AI/ML</strong>, mathematics,
-                    and technology.
-
-                    I enjoy turning ideas into real projects
-                    and solving problems through code.
-
-                </p>
-
-
-                <!-- Hero Goal -->
-
-                <div class="hero-goal-card">
-
-
-                    <div class="hero-goal-top">
-
-                        <span class="hero-goal-label">
-                            CURRENT DIRECTION
-                        </span>
-
-                        <span class="hero-goal-number">
-                            01
-                        </span>
-
+        </header>
+        <main id="main-content">
+            <section class="home-intro" id="home">
+                <div class="wrap">
+                    <div class="intro-grid">
+                        <div class="intro-copy">
+                            <span class="eyebrow">
+                                Student. Developer. Always curious.
+                            </span>
+                            <h1>
+                                Seungyun
+                                <span>
+                                    Lim.
+                                </span>
+                            </h1>
+                            <p class="intro-lead">
+                                Learning how things work.
+                                <br>
+                                Building what comes next.
+                            </p>
+                            <p>
+                                I'm a high school student exploring computer science, mathematics, and AI. I turn curiosity into code—and ideas into things people can use.
+                            </p>
+                            <div class="intro-actions">
+                                <a class="action" href="#projects">
+                                    Explore my work
+                                </a>
+                                <a class="action outline" href="about.html">
+                                    More about me
+                                </a>
+                            </div>
+                            <p class="intro-location">
+                                Based in Calgary, Canada
+                            </p>
+                        </div>
+                        <aside class="blueprint" aria-label="My current direction">
+                            <div class="blueprint-top">
+                                <span>
+                                    A WORK IN PROGRESS
+                                </span>
+                                <span>
+                                    EST. CURIOSITY
+                                </span>
+                            </div>
+                            <div class="blueprint-monogram" aria-hidden="true">
+                                <span>
+                                    &lt;
+                                </span>
+                                SL
+                                <span>
+                                    /&gt;
+                                </span>
+                            </div>
+                            <div class="blueprint-note">
+                                <span class="eyebrow">
+                                    Looking ahead
+                                </span>
+                                <h2>
+                                    Building toward
+                                    <br>
+                                    machine learning.
+                                </h2>
+                                <p>
+                                    Developing the skills to create thoughtful, useful technology.
+                                </p>
+                            </div>
+                            <div class="blueprint-bottom">
+                                <span class="pill">
+                                    Software
+                                </span>
+                                <span class="pill">
+                                    Mathematics
+                                </span>
+                                <span class="pill">
+                                    AI / ML
+                                </span>
+                            </div>
+                        </aside>
                     </div>
-
-
-                    <h2>
-
-                        Building toward
-
+                    <div class="intro-strip">
                         <span>
-                            Machine Learning.
+                            <strong>
+                                Currently building
+                            </strong>
+                            MaplePath &amp; MyWeb
                         </span>
-
-                    </h2>
-
-
-                    <p>
-
-                        My goal is to become a Machine Learning
-                        Engineer and build technology that solves
-                        meaningful problems.
-
-                    </p>
-
-                </div>
-
-
-                <!-- Hero Buttons -->
-
-                <div class="hero-buttons">
-
-
-                    <a
-                        href="#projects"
-                        class="button primary-button"
-                    >
-
-                        Explore My Work
-
-                        <span class="button-arrow">
-                            →
+                        <span>
+                            <strong>
+                                Driven by
+                            </strong>
+                            Curiosity, creativity, and a good challenge
                         </span>
-
-                    </a>
-
-
-                    <a
-                        href="#about"
-                        class="button secondary-button"
-                    >
-
-                        Discover My Story
-
-                    </a>
-
-                </div>
-
-
-                <!-- Scroll Indicator -->
-
-                <div class="hero-scroll">
-
-                    <span>
-                        SCROLL TO EXPLORE
-                    </span>
-
-                    <div class="hero-scroll-line"></div>
-
-                </div>
-
-            </div>
-
-
-            <!-- =====================================
-                 FLOATING IDENTITY LABELS
-            ====================================== -->
-
-            <div
-                class="hero-floating hero-floating-one"
-            >
-
-                <span>
-                    01
-                </span>
-
-                <strong>
-                    COMPUTER SCIENCE
-                </strong>
-
-            </div>
-
-
-            <div
-                class="hero-floating hero-floating-two"
-            >
-
-                <span>
-                    02
-                </span>
-
-                <strong>
-                    AI / ML
-                </strong>
-
-            </div>
-
-
-            <div
-                class="hero-floating hero-floating-three"
-            >
-
-                <span>
-                    03
-                </span>
-
-                <strong>
-                    BUILDING
-                </strong>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-            ABOUT
-        ========================================= -->
-
-        <section
-            id="about"
-            class="about-section"
-        >
-
-            <div class="about-section-background">
-
-                <div class="about-grid"></div>
-
-                <div class="about-orb about-orb-one"></div>
-
-                <div class="about-orb about-orb-two"></div>
-
-            </div>
-
-
-            <div class="section-container about-container">
-
-
-                <!-- =====================================
-                    SECTION HEADER
-                ====================================== -->
-
-                <div class="about-header reveal">
-
-                    <p class="section-label">
-                        WHO I AM
-                    </p>
-
-
-                    <p class="about-eyebrow">
-                        CURIOUS BY NATURE. BUILT TO CREATE.
-                    </p>
-
-
-                    <h2>
-
-                        I don't just want to
-                        <span>understand</span>
-                        technology.
-
-                    </h2>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    MAIN IDENTITY AREA
-                ====================================== -->
-
-                <div class="about-main">
-
-
-                    <!-- =================================
-                        LARGE STATEMENT
-                    ================================== -->
-
-                    <div class="about-statement reveal reveal-left">
-
-                        <span class="about-statement-mark">
-                            “
-                        </span>
-
-
-                        <p>
-
-                            I want to understand
-                            <strong>how things work</strong> —
-                            and then build something
-                            with what I learned.
-
-                        </p>
-
-
-                        <div class="about-statement-line"></div>
-
-
-                        <span class="about-statement-caption">
-                            HOW I LIKE TO LEARN
-                        </span>
-
                     </div>
-
-
-
-                    <!-- =================================
-                        DESCRIPTION
-                    ================================== -->
-
-                    <div class="about-description reveal reveal-right">
-
-                        <p>
-
-                            I'm a high school student in Calgary,
-                            Canada, with a strong interest in
-                            computer science, mathematics,
-                            science, and technology.
-
-                        </p>
-
-
-                        <p>
-
-                            I learn best by building. Whether it's
-                            a website, a database application, or a
-                            larger software project, I like taking
-                            an idea from something that exists only
-                            in my head and turning it into something
-                            real.
-
-                        </p>
-
-
-                        <a
-                            href="about.html"
-                            class="about-more-link"
-                        >
-
-                            <span>
-                                More about my story
+                </div>
+            </section>
+            <section class="home-section work-section" id="projects">
+                <div class="wrap">
+                    <div class="section-top">
+                        <div>
+                            <span class="eyebrow">
+                                Selected work
                             </span>
-
-                            <span class="about-more-arrow">
-                                ↗
-                            </span>
-
+                            <h2>
+                                Ideas, put into practice.
+                            </h2>
+                        </div>
+                        <a class="text-action" href="projects.html">
+                            All projects
                         </a>
-
                     </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    IDENTITY CARDS
-                ====================================== -->
-
-                <div class="about-identity-grid reveal-stagger">
-
-
-                    <!-- Computer Science -->
-
-                    <article
-                        class="about-identity-card reveal reveal-scale"
-                    >
-
-                        <div class="about-card-top">
-
-                            <span class="about-card-number">
-                                01
+                    <article class="work-feature">
+                        <div class="work-copy">
+                            <span class="eyebrow">
+                                Featured project · In development
                             </span>
-
-                            <span class="about-card-icon">
-                                ◇
-                            </span>
-
-                        </div>
-
-
-                        <div class="about-card-content">
-
-                            <p class="about-card-label">
-                                THINK
-                            </p>
-
-                            <h3>
-                                Computer Science
-                            </h3>
-
-                            <p>
-
-                                I enjoy programming,
-                                problem solving, algorithms,
-                                and understanding how software
-                                works beneath the surface.
-
-                            </p>
-
-                        </div>
-
-
-                        <div class="about-card-line"></div>
-
-                    </article>
-
-
-
-                    <!-- STEM -->
-
-                    <article
-                        class="about-identity-card about-card-featured reveal reveal-scale"
-                    >
-
-                        <div class="about-card-top">
-
-                            <span class="about-card-number">
-                                02
-                            </span>
-
-                            <span class="about-card-icon">
-                                +
-                            </span>
-
-                        </div>
-
-
-                        <div class="about-card-content">
-
-                            <p class="about-card-label">
-                                EXPLORE
-                            </p>
-
-                            <h3>
-                                STEM & Mathematics
-                            </h3>
-
-                            <p>
-
-                                Mathematics and science give me
-                                a different way to look at problems —
-                                one based on curiosity, logic,
-                                experimentation, and discovery.
-
-                            </p>
-
-                        </div>
-
-
-                        <div class="about-card-line"></div>
-
-                    </article>
-
-
-
-                    <!-- Building -->
-
-                    <article
-                        class="about-identity-card reveal reveal-scale"
-                    >
-
-                        <div class="about-card-top">
-
-                            <span class="about-card-number">
-                                03
-                            </span>
-
-                            <span class="about-card-icon">
-                                ↗
-                            </span>
-
-                        </div>
-
-
-                        <div class="about-card-content">
-
-                            <p class="about-card-label">
-                                CREATE
-                            </p>
-
-                            <h3>
-                                Building
-                            </h3>
-
-                            <p>
-
-                                Ideas become much more interesting
-                                when you actually build them.
-                                That's where I spend a lot of my time.
-
-                            </p>
-
-                        </div>
-
-
-                        <div class="about-card-line"></div>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    BOTTOM IDENTITY STRIP
-                ====================================== -->
-
-                <div class="about-bottom reveal">
-
-                    <div class="about-bottom-left">
-
-                        <span class="about-bottom-dot"></span>
-
-                        <span>
-                            CURRENTLY BUILDING
-                        </span>
-
-                    </div>
-
-
-                    <strong>
-                        SOFTWARE • AI / ML • IDEAS
-                    </strong>
-
-
-                    <span class="about-bottom-number">
-                        01 / 06
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-            PROJECTS
-        ========================================= -->
-
-        <section
-            id="projects"
-            class="projects-section"
-        >
-
-            <!-- =====================================
-                PROJECT BACKGROUND
-            ====================================== -->
-
-            <div class="projects-background">
-
-                <div class="projects-grid-background"></div>
-
-                <div class="projects-glow projects-glow-one"></div>
-
-                <div class="projects-glow projects-glow-two"></div>
-
-            </div>
-
-
-
-            <div class="section-container projects-container">
-
-
-                <!-- =====================================
-                    PROJECT HEADER
-                ====================================== -->
-
-                <div class="projects-header reveal">
-
-
-                    <p class="section-label">
-                        WHAT I'VE BUILT
-                    </p>
-
-
-                    <p class="projects-eyebrow">
-                        IDEAS → CODE → REALITY
-                    </p>
-
-
-                    <h2>
-
-                        I learn by
-                        <span>building.</span>
-
-                    </h2>
-
-
-                    <p class="projects-introduction">
-
-                        Every project starts with a question,
-                        a problem, or simply an idea I want to explore.
-                        Building is how I turn that curiosity into
-                        something real.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    FEATURED PROJECT — MAPLEPATH
-                ====================================== -->
-
-                <article
-                    class="featured-project-card reveal"
-                >
-
-
-                    <!-- Project Number -->
-
-                    <div class="featured-project-number">
-
-                        <span>
-                            01
-                        </span>
-
-                        <div></div>
-
-                        <p>
-                            FEATURED PROJECT
-                        </p>
-
-                    </div>
-
-
-
-                    <!-- Featured Project Content -->
-
-                    <div class="featured-project-content">
-
-
-                        <!-- Left -->
-
-                        <div class="featured-project-info">
-
-
-                            <p class="featured-project-category">
-                                FULL-STACK WEB APPLICATION
-                            </p>
-
-
                             <h3>
                                 MaplePath
                             </h3>
-
-
-                            <p class="featured-project-description">
-
-                                A personalized immigration journey
-                                platform designed to help people
-                                understand, organize, and track
-                                their Canadian permanent residence
-                                journey.
-
+                            <p>
+                                Making the Canadian immigration journey easier to understand. A platform for personalized roadmaps, progress tracking, and community timeline insights.
                             </p>
-
-
-                            <!-- Project Technologies -->
-
-                            <div class="featured-project-technologies">
-
-                                <span>
-                                    HTML
-                                </span>
-
-                                <span>
-                                    CSS
-                                </span>
-
-                                <span>
+                            <div class="tags">
+                                <span class="pill">
                                     JavaScript
                                 </span>
-
-                                <span>
+                                <span class="pill">
                                     Node.js
                                 </span>
-
-                                <span>
+                                <span class="pill">
                                     Express
                                 </span>
-
-                                <span>
+                                <span class="pill">
                                     MongoDB
                                 </span>
-
                             </div>
-
-
-                            <!-- Project Link -->
-
-                            <a
-                                href="projects/maplepath.html"
-                                class="featured-project-link"
-                            >
-
-                                <span>
-                                    Explore MaplePath
-                                </span>
-
-                                <span>
-                                    ↗
-                                </span>
-
+                            <a class="action" href="projects/maplepath.html">
+                                Explore the case study
                             </a>
-
                         </div>
-
-
-
-                        <!-- Right — Visual -->
-
-                        <div class="featured-project-visual">
-
-
-                            <div class="project-visual-window">
-
-
-                                <!-- Window Header -->
-
-                                <div class="project-window-header">
-
-                                    <div class="project-window-dots">
-
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-
-                                    </div>
-
-
+                        <div class="work-preview">
+                            <div class="journey-window">
+                                <div class="journey-title">
+                                    <strong>
+                                        MaplePath
+                                    </strong>
                                     <span>
-                                        maplepath
+                                        JOURNEY PREVIEW
                                     </span>
-
                                 </div>
-
-
-
-                                <!-- Fake Interface -->
-
-                                <div class="project-window-content">
-
-
-                                    <div class="window-sidebar">
-
-                                        <span class="window-sidebar-active">
-                                            Journey
-                                        </span>
-
-                                        <span>
-                                            Profile
-                                        </span>
-
-                                        <span>
-                                            Timeline
-                                        </span>
-
-                                        <span>
-                                            Analytics
-                                        </span>
-
+                                <div class="journey-body">
+                                    <h4>
+                                        A clearer path forward.
+                                    </h4>
+                                    <p>
+                                        Your journey, one step at a time.
+                                    </p>
+                                    <div class="journey-track">
+                                        <div class="journey-stop">
+                                            <b aria-hidden="true">
+                                                ✓
+                                            </b>
+                                            <div>
+                                                Create your profile
+                                                <small>
+                                                    Completed
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="journey-stop current">
+                                            <b aria-hidden="true">
+                                                2
+                                            </b>
+                                            <div>
+                                                Explore your pathway
+                                                <small>
+                                                    Find your next step
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="journey-stop">
+                                            <b aria-hidden="true">
+                                                3
+                                            </b>
+                                            <div>
+                                                Track your progress
+                                                <small>
+                                                    Keep everything in one place
+                                                </small>
+                                            </div>
+                                        </div>
                                     </div>
-
-
-                                    <div class="window-main">
-
-
-                                        <div class="window-main-top">
-
-                                            <span>
-                                                CANADA
-                                            </span>
-
-                                            <strong>
-                                                EXPRESS ENTRY
-                                            </strong>
-
-                                        </div>
-
-
-                                        <div class="window-progress">
-
-                                            <div
-                                                class="window-progress-fill"
-                                            ></div>
-
-                                        </div>
-
-
-                                        <div class="window-steps">
-
-
-                                            <div class="window-step complete">
-
-                                                <span>
-                                                    ✓
-                                                </span>
-
-                                                <div>
-
-                                                    <strong>
-                                                        Create Profile
-                                                    </strong>
-
-                                                    <small>
-                                                        Completed
-                                                    </small>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="window-step active">
-
-                                                <span>
-                                                    02
-                                                </span>
-
-                                                <div>
-
-                                                    <strong>
-                                                        Submit Application
-                                                    </strong>
-
-                                                    <small>
-                                                        Current step
-                                                    </small>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="window-step">
-
-                                                <span>
-                                                    03
-                                                </span>
-
-                                                <div>
-
-                                                    <strong>
-                                                        Receive Decision
-                                                    </strong>
-
-                                                    <small>
-                                                        Upcoming
-                                                    </small>
-
-                                                </div>
-
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-
                                 </div>
-
                             </div>
-
-
-                            <div class="featured-project-orbit"></div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Bottom -->
-
-                    <div class="featured-project-footer">
-
-                        <span>
-                            PROJECT / 01
-                        </span>
-
-                        <span>
-                            CURRENTLY DEVELOPING
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =====================================
-                    OTHER PROJECTS
-                ====================================== -->
-
-                <div class="projects-secondary-header reveal">
-
-                    <div>
-
-                        <p class="projects-small-label">
-                            MORE BUILDS
-                        </p>
-
-                        <h3>
-                            Experiments, tools & ideas.
-                        </h3>
-
-                    </div>
-
-
-                    <span>
-                        02 — 03
-                    </span>
-
-                </div>
-
-
-
-                <div class="project-grid">
-
-
-                    <!-- =================================
-                        FINDINPI
-                    ================================== -->
-
-                    <article
-                        class="project-card project-card-dark reveal reveal-scale"
-                    >
-
-                        <div class="project-card-top">
-
-                            <span class="project-number">
-                                02
-                            </span>
-
-                            <span class="project-category">
-                                WEB APPLICATION
-                            </span>
-
-                        </div>
-
-
-                        <div class="project-card-icon">
-                            π
-                        </div>
-
-
-                        <div class="project-card-content">
-
-                            <p class="project-card-label">
-                                SEARCH / DATA
+                            <p class="preview-caption">
+                                Interface concept · Explore the interactive preview in the case study.
                             </p>
-
+                        </div>
+                    </article>
+                    <div class="work-grid">
+                        <article class="work-card">
+                            <span class="work-symbol" aria-hidden="true">
+                                π
+                            </span>
                             <h3>
                                 FindInPI
                             </h3>
-
-
                             <p>
-
-                                A website that allows users to
-                                search through millions of digits
-                                of π and discover where specific
-                                numbers appear.
-
+                                A small question with millions of possibilities: where does your number appear in the digits of π?
                             </p>
-
-                        </div>
-
-
-                        <div class="project-card-bottom">
-
-
-                            <div class="project-technologies">
-
-                                <span>
+                            <div class="tags">
+                                <span class="pill">
                                     HTML
                                 </span>
-
-                                <span>
+                                <span class="pill">
                                     CSS
                                 </span>
-
-                                <span>
+                                <span class="pill">
                                     JavaScript
                                 </span>
-
                             </div>
-
-
-                            <a
-                                href="projects/findinpi.html"
-                            >
-
-                                View Project
-                                <span>↗</span>
-
+                            <a class="text-action" href="projects/findinpi.html">
+                                Project notes · Coming soon
                             </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- =================================
-                        ROBOT TOOL DATABASE
-                    ================================== -->
-
-                    <article
-                        class="project-card project-card-dark reveal reveal-scale"
-                    >
-
-                        <div class="project-card-top">
-
-                            <span class="project-number">
-                                03
+                        </article>
+                        <article class="work-card">
+                            <span class="work-symbol" aria-hidden="true">
+                                { }
                             </span>
-
-                            <span class="project-category">
-                                DATABASE APPLICATION
-                            </span>
-
-                        </div>
-
-
-                        <div class="project-card-icon">
-                            ◈
-                        </div>
-
-
-                        <div class="project-card-content">
-
-                            <p class="project-card-label">
-                                SYSTEMS / DATA
-                            </p>
-
                             <h3>
                                 Robot Tool Database
                             </h3>
-
-
                             <p>
-
-                                A database-driven application for
-                                organizing and managing information
-                                about robotic tools.
-
+                                A database-driven application for organizing robotic tool information and making it easier to manage.
                             </p>
-
-                        </div>
-
-
-                        <div class="project-card-bottom">
-
-
-                            <div class="project-technologies">
-
-                                <span>
+                            <div class="tags">
+                                <span class="pill">
                                     Node.js
                                 </span>
-
-                                <span>
+                                <span class="pill">
                                     Express
                                 </span>
-
-                                <span>
+                                <span class="pill">
                                     SQLite
                                 </span>
-
                             </div>
-
-
-                            <a
-                                href="projects/robot-tool-database.html"
-                            >
-
-                                View Project
-                                <span>↗</span>
-
+                            <a class="text-action" href="projects/robot-tool-database.html">
+                                Project notes · Coming soon
                             </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    PROJECT FOOTER
-                ====================================== -->
-
-                <div class="projects-footer reveal">
-
-                    <div class="projects-footer-line"></div>
-
-
-                    <a
-                        href="projects.html"
-                        class="projects-all-link"
-                    >
-
-                        <span>
-                            View all projects
-                        </span>
-
-                        <strong>
-                            →
-                        </strong>
-
-                    </a>
-
-
-                    <div class="projects-footer-line"></div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-            INTERESTS
-        ========================================= -->
-
-        <section
-            class="interests-section reveal"
-        >
-
-            <div class="section-container">
-
-
-                <!-- Section Introduction -->
-
-                <div class="interests-intro">
-
-                    <p class="section-label">
-                        WHAT DRIVES ME
-                    </p>
-
-                    <h2>
-                        Always learning.
-                        <span>Always exploring.</span>
-                    </h2>
-
-                    <p class="interests-description">
-
-                        My interests aren't limited to one field.
-                        I like exploring different ways of thinking,
-                        creating, competing, and understanding the world.
-
-                    </p>
-
-                </div>
-
-
-                <!-- Interest Network -->
-
-                <div class="interest-network">
-
-
-                    <!-- =========================================
-                        INTEREST CARDS
-                    ========================================= -->
-
-
-                    <!-- Computer Science -->
-
-                    <article
-                        class="interest-card interest-card-main reveal"
-                        data-link="interests/computer-science.html"
-                    >
-
-                        <div class="interest-card-number">
-                            01
-                        </div>
-
-                        <div class="interest-card-icon">
-                            💻
-                        </div>
-
-                        <h3>
-                            Computer Science
-                        </h3>
-
-                        <p>
-
-                            Software development, algorithms,
-                            systems, and turning ideas into
-                            useful applications.
-
-                        </p>
-
-                        <span class="interest-card-tag">
-                            BUILD
-                        </span>
-
-                    </article>
-
-
-
-                    <!-- AI / ML -->
-
-                    <article
-                        class="interest-card interest-card-main reveal"
-                        data-link="interests/ai-ml.html"
-                    >
-
-                        <div class="interest-card-number">
-                            02
-                        </div>
-
-                        <div class="interest-card-icon">
-                            🤖
-                        </div>
-
-                        <h3>
-                            AI & Machine Learning
-                        </h3>
-
-                        <p>
-
-                            Exploring intelligent systems,
-                            machine learning, and how AI can
-                            solve meaningful problems.
-
-                        </p>
-
-                        <span class="interest-card-tag">
-                            EXPLORE
-                        </span>
-
-                    </article>
-
-
-
-                    <!-- STEM -->
-
-                    <article
-                        class="interest-card interest-card-main reveal"
-                        data-link="interests/stem-mathematics.html"
-                    >
-
-                        <div class="interest-card-number">
-                            03
-                        </div>
-
-                        <div class="interest-card-icon">
-                            🔬
-                        </div>
-
-                        <h3>
-                            STEM & Mathematics
-                        </h3>
-
-                        <p>
-
-                            Problem solving, mathematics,
-                            science, competitions, and
-                            understanding how things work.
-
-                        </p>
-
-                        <span class="interest-card-tag">
-                            DISCOVER
-                        </span>
-
-                    </article>
-
-
-
-                    <!-- Sports -->
-
-                    <article
-                        class="interest-card interest-card-side reveal"
-                        data-link="interests/sports.html"
-                    >
-
-                        <div class="interest-card-number">
-                            04
-                        </div>
-
-                        <div class="interest-card-icon">
-                            🏃
-                        </div>
-
-                        <h3>
-                            Sports
-                        </h3>
-
-                        <p>
-
-                            Running, volleyball, basketball,
-                            and challenging myself to
-                            continuously improve.
-
-                        </p>
-
-                        <span class="interest-card-tag">
-                            COMPETE
-                        </span>
-
-                    </article>
-
-
-
-                    <!-- Music -->
-
-                    <article
-                        class="interest-card interest-card-side reveal"
-                        data-link="interests/music.html"
-                    >
-
-                        <div class="interest-card-number">
-                            05
-                        </div>
-
-                        <div class="interest-card-icon">
-                            🎹
-                        </div>
-
-                        <h3>
-                            Music
-                        </h3>
-
-                        <p>
-
-                            Piano, music, creativity, and
-                            another way of thinking beyond
-                            code and mathematics.
-
-                        </p>
-
-                        <span class="interest-card-tag">
-                            CREATE
-                        </span>
-
-                    </article>
-
-
-                    <!-- Connecting Line -->
-
-                    <div
-                        class="interest-network-line interest-network-line-one"
-                    ></div>
-
-                    <div
-                        class="interest-network-line interest-network-line-two"
-                    ></div>
-
-                    <div
-                        class="interest-network-line interest-network-line-three"
-                    ></div>
-
-                </div>
-
-
-                <!-- Closing Statement -->
-
-                <div class="interests-closing reveal">
-
-                    <span>
-                        DIFFERENT DIRECTIONS
-                    </span>
-
-                    <p>
-                        Different interests.
-                        <strong>One mindset:</strong>
-                        keep learning.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-            JOURNEY
-        ========================================= -->
-
-        <section
-            id="journey"
-            class="focus-section journey-section reveal"
-        >
-
-            <div class="section-container">
-
-
-                <!-- Section Header -->
-
-                <div class="journey-header">
-
-                    <p class="section-label">
-                        MY JOURNEY
-                    </p>
-
-                    <h2>
-                        I'm not waiting for the future.
-                        I'm building toward it.
-                    </h2>
-
-                    <p class="journey-intro">
-
-                        Every project, challenge, and new experience
-                        is part of a bigger journey. These are a few
-                        of the directions I'm working toward right now.
-
-                    </p>
-
-                </div>
-
-
-                <!-- =====================================
-                    JOURNEY TIMELINE
-                ====================================== -->
-
-                <div class="journey-timeline">
-
-
-                    <!-- =================================
-                        JOURNEY ITEM 01
-                    ================================== -->
-
-                    <div class="journey-item reveal">
-
-                        <div class="journey-marker">
-
-                            <span>
-                                01
-                            </span>
-
-                        </div>
-
-
-                        <div class="journey-line"></div>
-
-
-                        <div class="journey-content">
-
-                            <span class="journey-category">
-                                BUILD
-                            </span>
-
-                            <h3>
-                                Turn ideas into real projects.
-                            </h3>
-
-                            <p>
-
-                                I want to keep building software that
-                                challenges me technically while solving
-                                problems that actually matter.
-
-                            </p>
-
-                        </div>
-
+                        </article>
                     </div>
-
-
-
-                    <!-- =================================
-                        JOURNEY ITEM 02
-                    ================================== -->
-
-                    <div class="journey-item reveal">
-
-                        <div class="journey-marker">
-
-                            <span>
-                                02
-                            </span>
-
-                        </div>
-
-
-                        <div class="journey-line"></div>
-
-
-                        <div class="journey-content">
-
-                            <span class="journey-category">
-                                EXPLORE
-                            </span>
-
-                            <h3>
-                                Go deeper into AI & Machine Learning.
-                            </h3>
-
-                            <p>
-
-                                I'm interested in understanding how
-                                intelligent systems work and eventually
-                                building my own solutions with them.
-
-                            </p>
-
-                        </div>
-
+                </div>
+            </section>
+            <section class="home-section" id="about">
+                <div class="wrap story-grid">
+                    <div class="story-copy">
+                        <span class="eyebrow">
+                            A little about me
+                        </span>
+                        <h2>
+                            Curiosity is
+                            <br>
+                            my starting point.
+                        </h2>
+                        <p>
+                            I like understanding how things work—and then building something with what I've learned. Programming brings together the logic, creativity, and problem solving that I enjoy.
+                        </p>
+                        <p>
+                            From websites and databases to mathematics, music, and sport, I'm always finding new ways to learn and challenge myself.
+                        </p>
+                        <a class="text-action" href="about.html">
+                            Get to know my story
+                        </a>
                     </div>
-
-
-
-                    <!-- =================================
-                        JOURNEY ITEM 03
-                    ================================== -->
-
-                    <div class="journey-item reveal">
-
-                        <div class="journey-marker">
-
-                            <span>
-                                03
-                            </span>
-
+                    <div class="principles">
+                        <div class="principle">
+                            <h3>
+                                Learn by doing.
+                            </h3>
+                            <p>
+                                Take an idea beyond the notebook. Build it, test it, and understand what makes it work.
+                            </p>
                         </div>
-
-
-                        <div class="journey-line"></div>
-
-
-                        <div class="journey-content">
-
-                            <span class="journey-category">
-                                GROW
+                        <div class="principle">
+                            <h3>
+                                Make it useful.
+                            </h3>
+                            <p>
+                                Look for real problems and think about the people on the other side of the screen.
+                            </p>
+                        </div>
+                        <div class="principle">
+                            <h3>
+                                Keep improving.
+                            </h3>
+                            <p>
+                                Stay open to feedback. Every challenge is a chance to make the next version better.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="home-section interests-section" id="interests">
+                <div class="wrap">
+                    <div class="section-top">
+                        <div>
+                            <span class="eyebrow">
+                                Beyond the code
                             </span>
-
+                            <h2>
+                                Different interests.
+                                <br>
+                                The same curiosity.
+                            </h2>
+                        </div>
+                        <p>
+                            The things I explore shape how I think, create, and approach a challenge.
+                        </p>
+                    </div>
+                    <div class="interest-list">
+                        <a class="interest-row" href="interests/computer-science.html">
+                            <h3>
+                                Computer Science
+                            </h3>
+                            <p>
+                                Software, algorithms, and turning ideas into useful applications.
+                            </p>
+                        </a>
+                        <a class="interest-row" href="interests/ai-ml.html">
+                            <h3>
+                                AI &amp; Machine Learning
+                            </h3>
+                            <p>
+                                Data, intelligent systems, and the mathematics behind them.
+                            </p>
+                        </a>
+                        <a class="interest-row" href="interests/stem-mathematics.html">
+                            <h3>
+                                STEM &amp; Mathematics
+                            </h3>
+                            <p>
+                                Patterns, experiments, and understanding the world through logic.
+                            </p>
+                        </a>
+                        <a class="interest-row" href="interests/sports.html">
+                            <h3>
+                                Sports &amp; Competition
+                            </h3>
+                            <p>
+                                Running, volleyball, basketball, and the discipline of improving.
+                            </p>
+                        </a>
+                        <a class="interest-row" href="interests/music.html">
+                            <h3>
+                                Music
+                            </h3>
+                            <p>
+                                Piano, creativity, and a different way to express an idea.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="home-section" id="journey">
+                <div class="wrap">
+                    <div class="section-top">
+                        <div>
+                            <span class="eyebrow">
+                                What's next
+                            </span>
+                            <h2>
+                                Growing with intention.
+                            </h2>
+                        </div>
+                        <a class="text-action" href="about.html#my-journey">
+                            Follow my journey
+                        </a>
+                    </div>
+                    <div class="direction-grid">
+                        <article class="direction-card">
+                            <span class="eyebrow">
+                                Build
+                            </span>
+                            <h3>
+                                More ambitious projects.
+                            </h3>
+                            <p>
+                                Create software that stretches my skills and helps solve problems that matter.
+                            </p>
+                        </article>
+                        <article class="direction-card">
+                            <span class="eyebrow">
+                                Explore
+                            </span>
+                            <h3>
+                                Go deeper into AI.
+                            </h3>
+                            <p>
+                                Connect programming and mathematics to understand how intelligent systems learn.
+                            </p>
+                        </article>
+                        <article class="direction-card">
+                            <span class="eyebrow">
+                                Grow
+                            </span>
                             <h3>
                                 Keep challenging myself.
                             </h3>
-
                             <p>
-
-                                From academics and competitions to
-                                leadership, sports, and new experiences,
-                                I want to keep pushing beyond what I
-                                already know.
-
+                                Build toward studying computer science, with room for new experiences along the way.
                             </p>
-
-                        </div>
-
+                        </article>
                     </div>
-
-
-
-                    <!-- =================================
-                        JOURNEY ITEM 04
-                    ================================== -->
-
-                    <div class="journey-item journey-item-last reveal">
-
-                        <div class="journey-marker">
-
-                            <span>
-                                04
+                </div>
+            </section>
+            <section class="home-section contact-wrap" id="contact">
+                <div class="wrap">
+                    <div class="contact-panel">
+                        <div class="contact-copy">
+                            <span class="eyebrow">
+                                Let's connect
                             </span>
-
-                        </div>
-
-
-                        <div class="journey-content">
-
-                            <span class="journey-category">
-                                FUTURE
-                            </span>
-
-                            <h3>
-                                Build toward something bigger.
-                            </h3>
-
+                            <h2>
+                                Good things start
+                                <br>
+                                with an idea.
+                            </h2>
                             <p>
-
-                                My long-term goal is to study computer
-                                science and move toward a future in
-                                machine learning and AI engineering.
-
+                                Interested in what I'm building? Explore my code and follow along as these projects grow.
                             </p>
-
                         </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    JOURNEY CTA
-                ====================================== -->
-
-                <div class="journey-footer reveal">
-
-                    <div class="journey-footer-line"></div>
-
-
-                    <a
-                        href="journey.html"
-                        class="journey-link"
-                    >
-
-                        <span>
-                            EXPLORE THE FULL JOURNEY
-                        </span>
-
-                        <strong>
-                            →
-                        </strong>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-            CONTACT
-        ========================================= -->
-
-        <section
-            id="contact"
-            class="contact-section reveal"
-        >
-
-            <div class="section-container">
-
-
-                <!-- Contact Header -->
-
-                <div class="contact-header">
-
-                    <p class="section-label">
-                        LET'S CONNECT
-                    </p>
-
-
-                    <h2>
-                        Have an idea?
-                        <span>
-                            Let's build.
-                        </span>
-                    </h2>
-
-
-                    <p class="contact-description">
-
-                        Whether you want to talk about a project,
-                        technology, STEM, or simply connect,
-                        I'd be happy to hear from you.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    CONTACT ACTION
-                ====================================== -->
-
-                <div class="contact-action reveal">
-
-                    <a
-                        href="contact.html"
-                        class="contact-main-button"
-                    >
-
-                        <span>
-                            GET IN TOUCH
-                        </span>
-
-                        <strong>
-                            →
-                        </strong>
-
-                    </a>
-
-                </div>
-
-
-
-                <!-- =====================================
-                    CONTACT DIVIDER
-                ====================================== -->
-
-                <div class="contact-divider"></div>
-
-
-
-                <!-- =====================================
-                    CONTACT FOOTER
-                ====================================== -->
-
-                <div class="contact-bottom reveal">
-
-
-                    <div class="contact-note">
-
-                        <span>
-                            CURRENTLY
-                        </span>
-
-                        <strong>
-                            Building • Learning • Exploring
-                        </strong>
-
-                    </div>
-
-
-                    <div class="contact-socials">
-
-
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub
+                        <a class="action" href="https://github.com/mape-yt" target="_blank" rel="noopener noreferrer">
+                            Find me on GitHub
                         </a>
-
-
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            YouTube
-                        </a>
-
-
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            LinkedIn
-                        </a>
-
                     </div>
-
                 </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================================
-        FOOTER
-    ========================================= -->
-
-    <footer class="footer">
-
-        <div class="footer-container">
-
-
-            <!-- Footer Main -->
-
-            <div class="footer-main">
-
-
-                <div class="footer-brand">
-
-                    <a
-                        href="#home"
-                        class="footer-logo"
-                    >
-                        Seungyun Lim
-                    </a>
-
-
-                    <p class="footer-tagline">
-                        Student. Developer. Builder.
-                    </p>
-
-
-                    <p class="footer-description">
-
-                        Building things.
-                        Learning constantly.
-                        Looking ahead.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- Footer Navigation -->
-
-                <div class="footer-navigation">
-
-                    <span class="footer-heading">
-                        EXPLORE
-                    </span>
-
-
-                    <a href="#home">
-                        Home
-                    </a>
-
-                    <a href="#about">
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="wrap">
+                <p>
+                    © 2026 Seungyun Lim · Built with curiosity.
+                </p>
+                <nav aria-label="Footer navigation">
+                    <a href="about.html">
                         About
                     </a>
-
-                    <a href="#projects">
-                        Projects
-                    </a>
-
-                    <a href="#journey">
-                        Journey
-                    </a>
-
-                    <a href="#contact">
-                        Contact
-                    </a>
-
-                </div>
-
-
-
-                <!-- Footer Socials -->
-
-                <div class="footer-social">
-
-                    <span class="footer-heading">
-                        CONNECT
-                    </span>
-
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://github.com/mape-yt" target="_blank" rel="noopener noreferrer">
                         GitHub
-                        <span>↗</span>
                     </a>
-
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        YouTube
-                        <span>↗</span>
+                    <a href="#main-content">
+                        Back to top
                     </a>
-
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        LinkedIn
-                        <span>↗</span>
-                    </a>
-
-                </div>
-
+                </nav>
             </div>
-
-
-
-            <!-- Footer Divider -->
-
-            <div class="footer-divider"></div>
-
-
-
-            <!-- Footer Bottom -->
-
-            <div class="footer-bottom">
-
-
-                <p>
-                    © 2026 Seungyun Lim
-                </p>
-
-
-                <a
-                    href="#home"
-                    class="back-to-top"
-                >
-
-                    Back to top
-
-                    <span>
-                        ↑
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
-
-    <script src="js/main.js"></script>
-
-</body>
-
+        </footer>
+        <script src="js/site.js?v=20261118" defer>
+        </script>
+    </body>
 </html>

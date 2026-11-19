@@ -9,6 +9,8 @@
         <meta name="description" content="Seungyun Lim — a student and developer in Calgary exploring computer science, machine learning, and useful software. Explore my projects, interests, and story.">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/theme.css?v=20261118">
+    <meta name="theme-color" content="#080e1b">
+        <link rel="stylesheet" href="css/home.css?v=1">
     </head>
     <body class="home-page">
         <a class="skip-link" href="#main-content">
@@ -43,14 +45,15 @@
                     </a>
                 </nav>
             </div>
+        <div class="reading-progress" aria-hidden="true"></div>
         </header>
         <main id="main-content">
             <section class="home-intro" id="home">
                 <div class="wrap">
                     <div class="intro-grid">
-                        <div class="intro-copy">
+                        <div class="intro-copy entrance">
                             <span class="eyebrow">
-                                Student. Developer. Always curious.
+                                15 years old. A lifetime of ideas.
                             </span>
                             <h1>
                                 Seungyun
@@ -78,48 +81,17 @@
                                 Based in Calgary, Canada
                             </p>
                         </div>
-                        <aside class="blueprint" aria-label="My current direction">
-                            <div class="blueprint-top">
-                                <span>
-                                    A WORK IN PROGRESS
-                                </span>
-                                <span>
-                                    EST. CURIOSITY
-                                </span>
+                        <aside class="sculpture entrance" style="--delay: 150ms" aria-label="Interactive generative sculpture">
+                            <div class="sculpture-hud"><span>THE CURIOSITY ENGINE</span><span>CODE → FORM</span></div>
+                            <div class="sculpture-stage">
+                                <canvas id="sculpture-canvas" aria-hidden="true"></canvas>
                             </div>
-                            <div class="blueprint-monogram" aria-hidden="true">
-                                <span>
-                                    &lt;
-                                </span>
-                                SL
-                                <span>
-                                    /&gt;
-                                </span>
+                            <div class="sculpture-controls" role="group" aria-label="Choose a sculpture shape">
+                                <button class="shape-button" data-shape="sphere" type="button" aria-pressed="true">Sphere</button>
+                                <button class="shape-button" data-shape="orbit" type="button" aria-pressed="false">Orbit</button>
+                                <button class="shape-button" data-shape="wave" type="button" aria-pressed="false">Wave</button>
                             </div>
-                            <div class="blueprint-note">
-                                <span class="eyebrow">
-                                    Looking ahead
-                                </span>
-                                <h2>
-                                    Building toward
-                                    <br>
-                                    machine learning.
-                                </h2>
-                                <p>
-                                    Developing the skills to create thoughtful, useful technology.
-                                </p>
-                            </div>
-                            <div class="blueprint-bottom">
-                                <span class="pill">
-                                    Software
-                                </span>
-                                <span class="pill">
-                                    Mathematics
-                                </span>
-                                <span class="pill">
-                                    AI / ML
-                                </span>
-                            </div>
+                            <p class="sculpture-caption"><span id="sculpture-description" aria-live="polite">A world of possibilities. Built from connected points.</span><span class="sculpture-hint">Choose a shape. Watch the idea evolve.</span></p>
                         </aside>
                     </div>
                     <div class="intro-strip">
@@ -140,7 +112,7 @@
             </section>
             <section class="home-section work-section" id="projects">
                 <div class="wrap">
-                    <div class="section-top">
+                    <div class="section-top" data-reveal>
                         <div>
                             <span class="eyebrow">
                                 Selected work
@@ -153,7 +125,7 @@
                             All projects
                         </a>
                     </div>
-                    <article class="work-feature">
+                    <article class="work-feature" data-reveal>
                         <div class="work-copy">
                             <span class="eyebrow">
                                 Featured project · In development
@@ -242,7 +214,7 @@
                         </div>
                     </article>
                     <div class="work-grid">
-                        <article class="work-card">
+                        <article class="work-card" data-reveal>
                             <span class="work-symbol" aria-hidden="true">
                                 π
                             </span>
@@ -267,7 +239,7 @@
                                 Project notes · Coming soon
                             </a>
                         </article>
-                        <article class="work-card">
+                        <article class="work-card" data-reveal>
                             <span class="work-symbol" aria-hidden="true">
                                 { }
                             </span>
@@ -297,7 +269,7 @@
             </section>
             <section class="home-section" id="about">
                 <div class="wrap story-grid">
-                    <div class="story-copy">
+                    <div class="story-copy" data-reveal>
                         <span class="eyebrow">
                             A little about me
                         </span>
@@ -317,7 +289,7 @@
                         </a>
                     </div>
                     <div class="principles">
-                        <div class="principle">
+                        <div class="principle" data-reveal>
                             <h3>
                                 Learn by doing.
                             </h3>
@@ -325,7 +297,7 @@
                                 Take an idea beyond the notebook. Build it, test it, and understand what makes it work.
                             </p>
                         </div>
-                        <div class="principle">
+                        <div class="principle" data-reveal>
                             <h3>
                                 Make it useful.
                             </h3>
@@ -333,7 +305,7 @@
                                 Look for real problems and think about the people on the other side of the screen.
                             </p>
                         </div>
-                        <div class="principle">
+                        <div class="principle" data-reveal>
                             <h3>
                                 Keep improving.
                             </h3>
@@ -346,7 +318,7 @@
             </section>
             <section class="home-section interests-section" id="interests">
                 <div class="wrap">
-                    <div class="section-top">
+                    <div class="section-top" data-reveal>
                         <div>
                             <span class="eyebrow">
                                 Beyond the code
@@ -362,7 +334,7 @@
                         </p>
                     </div>
                     <div class="interest-list">
-                        <a class="interest-row" href="interests/computer-science.html">
+                        <a class="interest-row" data-reveal href="interests/computer-science.html">
                             <h3>
                                 Computer Science
                             </h3>
@@ -370,7 +342,7 @@
                                 Software, algorithms, and turning ideas into useful applications.
                             </p>
                         </a>
-                        <a class="interest-row" href="interests/ai-ml.html">
+                        <a class="interest-row" data-reveal href="interests/ai-ml.html">
                             <h3>
                                 AI &amp; Machine Learning
                             </h3>
@@ -378,7 +350,7 @@
                                 Data, intelligent systems, and the mathematics behind them.
                             </p>
                         </a>
-                        <a class="interest-row" href="interests/stem-mathematics.html">
+                        <a class="interest-row" data-reveal href="interests/stem-mathematics.html">
                             <h3>
                                 STEM &amp; Mathematics
                             </h3>
@@ -386,7 +358,7 @@
                                 Patterns, experiments, and understanding the world through logic.
                             </p>
                         </a>
-                        <a class="interest-row" href="interests/sports.html">
+                        <a class="interest-row" data-reveal href="interests/sports.html">
                             <h3>
                                 Sports &amp; Competition
                             </h3>
@@ -394,7 +366,7 @@
                                 Running, volleyball, basketball, and the discipline of improving.
                             </p>
                         </a>
-                        <a class="interest-row" href="interests/music.html">
+                        <a class="interest-row" data-reveal href="interests/music.html">
                             <h3>
                                 Music
                             </h3>
@@ -407,7 +379,7 @@
             </section>
             <section class="home-section" id="journey">
                 <div class="wrap">
-                    <div class="section-top">
+                    <div class="section-top" data-reveal>
                         <div>
                             <span class="eyebrow">
                                 What's next
@@ -421,7 +393,7 @@
                         </a>
                     </div>
                     <div class="direction-grid">
-                        <article class="direction-card">
+                        <article class="direction-card" data-reveal>
                             <span class="eyebrow">
                                 Build
                             </span>
@@ -432,7 +404,7 @@
                                 Create software that stretches my skills and helps solve problems that matter.
                             </p>
                         </article>
-                        <article class="direction-card">
+                        <article class="direction-card" data-reveal>
                             <span class="eyebrow">
                                 Explore
                             </span>
@@ -443,7 +415,7 @@
                                 Connect programming and mathematics to understand how intelligent systems learn.
                             </p>
                         </article>
-                        <article class="direction-card">
+                        <article class="direction-card" data-reveal>
                             <span class="eyebrow">
                                 Grow
                             </span>
@@ -459,7 +431,7 @@
             </section>
             <section class="home-section contact-wrap" id="contact">
                 <div class="wrap">
-                    <div class="contact-panel">
+                    <div class="contact-panel" data-reveal>
                         <div class="contact-copy">
                             <span class="eyebrow">
                                 Let's connect
@@ -500,5 +472,10 @@
         </footer>
         <script src="js/site.js?v=20261118" defer>
         </script>
+    <button class="motion-toggle" type="button" aria-pressed="false" hidden>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2h3v12H3zm7 0h3v12h-3z"/></svg>
+            <span>Pause effects</span>
+        </button>
+        <script src="js/home.js?v=1" defer></script>
     </body>
 </html>

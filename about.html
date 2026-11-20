@@ -10,7 +10,7 @@
         </title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/theme.css?v=20261118">
-        <link rel="stylesheet" href="css/about-lab.css?v=1">
+        <link rel="stylesheet" href="css/about-lab.css?v=2">
     </head>
     <body class="about-page">
         <a class="skip-link" href="#main-content">
@@ -84,6 +84,7 @@
                         </div>
                     </div>
                     <div class="identity-console" data-role="student">
+                        <div class="console-heading"><span>One person. Three perspectives.</span><span class="console-mark" aria-hidden="true">SL / ABOUT</span></div>
                         <div class="identity-art" aria-hidden="true">
                             <div class="identity-orbit">
                             </div>
@@ -159,7 +160,8 @@
                             A few chapters that have shaped the way I learn, build, and think. Choose a chapter to explore.
                         </p>
                     </div>
-                    <div class="chapter-tabs" aria-label="Journey chapters">
+                    <div class="journey-shell">
+<div class="chapter-tabs" aria-label="Journey chapters">
                         <button id="tab-early" type="button" data-chapter="early">
                             <small>
                                 A spark of curiosity
@@ -185,7 +187,8 @@
                             Today
                         </button>
                     </div>
-                    <article class="chapter-panel" id="chapter-early">
+                    <div class="chapter-panels">
+<article class="chapter-panel" id="chapter-early">
                         <div class="chapter-inner">
                             <div class="chapter-symbol" aria-hidden="true">
                                 ∑
@@ -301,7 +304,9 @@
                             </div>
                         </div>
                     </article>
-                    <div class="chapter-footer">
+                    </div>
+</div>
+<div class="chapter-footer">
                         <span>
                             Still learning. Still adding chapters.
                         </span>
@@ -328,7 +333,8 @@
                             Learning doesn't end when I understand something. That's usually when the interesting part starts.
                         </p>
                     </div>
-                    <div class="process-controls" role="group" aria-label="Explore my learning process">
+                    <div class="process-shell">
+<div class="process-controls" role="group" aria-label="Explore my learning process">
                         <button type="button" data-step="learn" aria-pressed="true">
                             Learn
                         </button>
@@ -346,22 +352,8 @@
                         </button>
                     </div>
                     <div class="process-layout">
-                        <div class="process-art" data-step="learn" aria-hidden="true">
-                            <i class="idea-block">
-                            </i>
-                            <i class="idea-block">
-                            </i>
-                            <i class="idea-block">
-                            </i>
-                            <i class="idea-block">
-                            </i>
-                            <i class="idea-block">
-                            </i>
-                            <span class="process-caption">
-                                CONNECT THE PIECES
-                            </span>
-                        </div>
-                        <div class="process-copy" aria-live="polite">
+                        <div class="process-art" data-step="learn" aria-hidden="true"><svg class="learning-diagram" viewBox="0 0 400 370" fill="none" aria-hidden="true"><circle class="diagram-orbit" cx="200" cy="184" r="104"/><path class="diagram-route" d="M200 52L340 150L286 304L114 304L60 150Z"/><circle class="diagram-center" cx="200" cy="184" r="58"/><text class="diagram-center-label" x="200" y="177">THE IDEA</text><text class="diagram-center-state" x="200" y="201">Learn</text><g class="diagram-node is-current" data-node="learn" transform="translate(200 52)"><circle class="node-halo" r="32"/><circle class="node-disc" r="24"/><path class="node-icon" d="M-8 -6h7c3 0 4 2 4 3v12c0-2-2-3-4-3h-7z M3 -3c0-1 1-3 4-3h5v12H7c-2 0-4 1-4 3"/><text class="node-label" y="47">Learn</text></g><g class="diagram-node" data-node="question" transform="translate(340 150)"><circle class="node-halo" r="32"/><circle class="node-disc" r="24"/><path class="node-icon" d="M-6 -5a6 6 0 1 1 8 6c-3 1-3 2-3 4 M-1 10h.1"/><text class="node-label" y="47">Question</text></g><g class="diagram-node" data-node="build" transform="translate(286 304)"><circle class="node-halo" r="32"/><circle class="node-disc" r="24"/><path class="node-icon" d="M-9 -5l9 -5 9 5v10l-9 5-9-5z M-9 -5l9 5 9-5 M0 0v10"/><text class="node-label" y="47">Build</text></g><g class="diagram-node" data-node="break" transform="translate(114 304)"><circle class="node-halo" r="32"/><circle class="node-disc" r="24"/><path class="node-icon" d="M-8 -8l16 16 M8 -8l-16 16"/><text class="node-label" y="47">Break</text></g><g class="diagram-node" data-node="improve" transform="translate(60 150)"><circle class="node-halo" r="32"/><circle class="node-disc" r="24"/><path class="node-icon" d="M-9 1l6 6L10 -7"/><text class="node-label" y="47">Improve</text></g></svg><span class="process-caption">CONNECT THE PIECES</span></div>
+<div class="process-copy" aria-live="polite">
                             <span class="eyebrow">
                                 The learning loop
                             </span>
@@ -372,11 +364,12 @@
                                 Understand how something works before trying to change it. Build a foundation, then find the questions worth asking.
                             </p>
                             <span class="process-note">
-                                Choose a step to see how the idea changes.
+                                Every step informs the next. The loop keeps going.
                             </span>
                         </div>
                     </div>
                 </div>
+</div>
             </section>
             <section>
                 <div class="wrap">
@@ -562,7 +555,7 @@
         </button>
         <script src="js/site.js?v=20261118" defer>
         </script>
-        <script src="js/about.js?v=2" defer>
+        <script src="js/about.js?v=3" defer>
         </script>
     </body>
 </html>

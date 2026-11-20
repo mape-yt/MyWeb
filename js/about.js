@@ -6,11 +6,28 @@
   const pointer = matchMedia('(hover: hover) and (pointer: fine)');
   const motionButton = document.querySelector('.lab-motion');
   let motion = !preference.matches;
+  const transitions = new Map();
+  // Replace an in-flight transition immediately, so rapid selections never show stale text.
+  function revealSelection(element) {
+    transitions.get(element)?.cancel();
+    transitions.delete(element);
+    if (!motion || preference.matches || !element.animate) return;
+    const animation = element.animate([
+      { opacity: .35, transform: 'translateY(6px)' },
+      { opacity: 1, transform: 'translateY(0)' }
+    ], { duration: 280, easing: 'cubic-bezier(.22,.8,.22,1)' });
+    transitions.set(element, animation);
+    animation.onfinish = () => transitions.delete(element);
+  }
   function setMotion(enabled) {
     motion = enabled;
     page.dataset.motion = enabled ? 'on' : 'off';
     motionButton.textContent = enabled ? 'Pause effects' : 'Enable effects';
     motionButton.setAttribute('aria-pressed', String(!enabled));
+    if (!enabled) {
+      transitions.forEach(animation => animation.cancel());
+      transitions.clear();
+    }
   }
   motionButton.hidden = false;
   motionButton.addEventListener('click', () => setMotion(!motion));
@@ -27,22 +44,31 @@
     const key = button.dataset.role;
     const data = roles[key];
     if (!data) return;
+    if (button.getAttribute('aria-pressed') === 'true') return;
     roleButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     document.querySelector('.identity-console').dataset.role = key;
     document.getElementById('role-title').textContent = data[0];
     document.getElementById('role-description').textContent = data[1];
+    revealSelection(document.querySelector('.identity-note'));
   }));
 
   const tabs = [...document.querySelectorAll('[data-chapter]')];
   const panels = [...document.querySelectorAll('.chapter-panel')];
   const tablist = document.querySelector('.chapter-tabs');
   tablist.setAttribute('role', 'tablist');
+  const compactTabs = matchMedia('(max-width: 700px)');
+  const updateTabOrientation = () => tablist.setAttribute('aria-orientation', compactTabs.matches ? 'horizontal' : 'vertical');
+  compactTabs.addEventListener('change', updateTabOrientation);
+  updateTabOrientation();
+  let currentChapter = 0;
   function selectChapter(index, moveFocus = false) {
     tabs.forEach((tab, i) => {
       tab.setAttribute('aria-selected', String(i === index));
       tab.tabIndex = i === index ? 0 : -1;
       panels[i].hidden = i !== index;
     });
+    if (index !== currentChapter) revealSelection(panels[index].querySelector('.chapter-inner'));
+    currentChapter = index;
     if (moveFocus) tabs[index].focus();
   }
   tabs.forEach((tab, index) => {
@@ -56,6 +82,8 @@
       let next;
       if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
       if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      if (!compactTabs.matches && event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+      if (!compactTabs.matches && event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
       if (event.key === 'Home') next = 0;
       if (event.key === 'End') next = tabs.length - 1;
       if (next !== undefined) { event.preventDefault(); selectChapter(next, true); }
@@ -75,11 +103,15 @@
     const key = button.dataset.step;
     const data = steps[key];
     if (!data) return;
+    if (button.getAttribute('aria-pressed') === 'true') return;
     stepButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     document.querySelector('.process-art').dataset.step = key;
     document.getElementById('process-title').textContent = data[0];
     document.getElementById('process-description').textContent = data[1];
     document.querySelector('.process-caption').textContent = data[2];
+    document.querySelector('.diagram-center-state').textContent = button.textContent.trim();
+    document.querySelectorAll('.diagram-node').forEach(node => node.classList.toggle('is-current', node.dataset.node === key));
+    revealSelection(document.querySelector('.process-copy'));
   }));
 
   if ('IntersectionObserver' in window) {

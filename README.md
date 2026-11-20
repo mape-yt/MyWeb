@@ -22,7 +22,8 @@ Open `http://127.0.0.1:8000`. Stop the server with Ctrl+C.
 - `style.css`: existing shared stylesheet imports.
 - `css/theme.css`: site-wide visual system and responsive layouts, loaded **after** other styles on every page.
 - `js/site.js`: shared mobile navigation.
-- `js/about.js`: timeline and learning-process interaction.
+- `css/about-lab.css`: About page visual design, responsive layout, and motion preferences.
+- `js/about.js`: perspectives, accessible journey tabs, and learning-process interaction.
 - `js/project-pages.js`: MaplePath's illustrative, browser-only preview.
 
 ## Design conventions
